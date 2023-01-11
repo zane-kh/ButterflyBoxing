@@ -69,7 +69,7 @@ app.use(errorHandler);
 //connect to atlas database
 import mongoose from "mongoose";
 
-const DB = process.env.MONGO_URI.replace("<PASSWORD>", process.env.PASSWORD);
+const DB = process.env.MONGO_URI.replace("password1234", process.env.PASSWORD);
 
 mongoose.connect(DB).then(() => {
   console.log("DB connection successful!".cyan.underline);
