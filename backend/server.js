@@ -69,11 +69,15 @@ app.use(errorHandler);
 //connect to atlas database
 import mongoose from "mongoose";
 
-const DB = process.env.MONGO_URI.replace("<PASSWORD>", process.env.PASSWORD);
+// const DB = process.env.MONGO_URI.replace("<PASSWORD>", process.env.PASSWORD);
 
-mongoose.connect(DB).then(() => {
-  console.log("DB connection successful!".cyan.underline);
-});
+mongoose
+  .connect(
+    "mongodb+srv://zane:password1234@cluster0.f2d7l.mongodb.net/ButterflyBoxing?retryWrites=true&w=majority"
+  )
+  .then(() => {
+    console.log("DB connection successful!".cyan.underline);
+  });
 //
 
 import colors from "colors";
